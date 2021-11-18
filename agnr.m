@@ -87,18 +87,18 @@ end
 for j=1:N_Unit
     for i=1:N_Unit
         
-        dis = sqrt( (atom_x0(j)-atom_x0(i))^2 + (atom_y0(j)-atom_y0(i))^2 );
+        distance = sqrt( (atom_x0(j)-atom_x0(i))^2 + (atom_y0(j)-atom_y0(i))^2 );
         
-        if  dis < mrg
+        if  distance < mrg
             H0(j,i) = eps;
             
-        elseif (d1-mrg<dis) && (dis<d1+mrg)
+        elseif (d1-mrg<distance) && (distance<d1+mrg)
             H0(j,i) = t1;
             
-        elseif (d2-mrg<dis) && (dis<d2+mrg)
+        elseif (d2-mrg<distance) && (distance<d2+mrg)
             H0(j,i) = t2;
             
-        elseif (d3-mrg<dis) && (dis<d3+mrg)
+        elseif (d3-mrg<distance) && (distance<d3+mrg)
             H0(j,i) = t3;
             
         else
@@ -110,18 +110,18 @@ end
 for j=1:N_Unit
     for i=1:N_Unit
         
-        dis = sqrt( (atom_x0(j)-atom_xl(i))^2 + (atom_y0(j)-atom_yl(i))^2 );
+        distance = sqrt( (atom_x0(j)-atom_xl(i))^2 + (atom_y0(j)-atom_yl(i))^2 );
         
-        if  dis < mrg
+        if  distance < mrg
             HL(j,i) = eps;
             
-        elseif (d1-mrg<dis) && (dis<d1+mrg)
+        elseif (d1-mrg<distance) && (distance<d1+mrg)
             HL(j,i) = t1;
             
-        elseif (d2-mrg<dis) && (dis<d2+mrg)
+        elseif (d2-mrg<distance) && (distance<d2+mrg)
             HL(j,i) = t2;
             
-        elseif (d3-mrg<dis) && (dis<d3+mrg)
+        elseif (d3-mrg<distance) && (distance<d3+mrg)
             HL(j,i) = t3;
             
         else
@@ -133,18 +133,18 @@ end
 for j=1:N_Unit
     for i=1:N_Unit
         
-        dis = sqrt( (atom_x0(j)-atom_xr(i))^2 + (atom_y0(j)-atom_yr(i))^2 );
+        distance = sqrt( (atom_x0(j)-atom_xr(i))^2 + (atom_y0(j)-atom_yr(i))^2 );
         
-        if  dis < mrg
+        if  distance < mrg
             HR(j,i) = eps;
             
-        elseif (d1-mrg<dis) && (dis<d1+mrg)
+        elseif (d1-mrg<distance) && (distance<d1+mrg)
             HR(j,i) = t1;
             
-        elseif (d2-mrg<dis) && (dis<d2+mrg)
+        elseif (d2-mrg<distance) && (distance<d2+mrg)
             HR(j,i) = t2;
             
-        elseif (d3-mrg<dis) && (dis<d3+mrg)
+        elseif (d3-mrg<distance) && (distance<d3+mrg)
             HR(j,i) = t3;
             
         else
